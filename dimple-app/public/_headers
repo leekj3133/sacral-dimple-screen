@@ -1,0 +1,5 @@
+/web_model/model.json
+  Cache-Control: public, max-age=3600
+
+/web_model/*
+  Cache-Control: public, max-age=31536000, immutable

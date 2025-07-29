@@ -1,0 +1,82 @@
+/* src/App.css */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; background:#f7f7fa; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+.wrap { min-height:100%; max-width: 720px; margin: 0 auto; padding: 24px; display:flex; flex-direction:column; gap:16px; }
+header h1 { margin:0 0 8px; }
+.card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 8px 24px rgba(0,0,0,0.06); display:flex; flex-direction:column; gap:16px; }
+.row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.primary { padding:10px 16px; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+.status { margin:0; color:#666; }
+.upload { display:inline-block; border:2px dashed #ccc; border-radius:16px; padding:16px; text-align:center; cursor:pointer; }
+.upload input { display:none; }
+.result { border-radius:16px; padding:16px; text-align:center; }
+.result.good { background:#e8f7ee; color:#096a2e; }
+.result.bad  { background:#ffeaea; color:#9b1c1c; }
+.result .label { font-size:24px; font-weight:700; margin-bottom:4px; }
+.result .prob  { font-size:14px; opacity:0.9; }
+footer { text-align:center; color:#888; }
+.uploader {
+  margin-top: 16px;
+  border: 2px dashed #d0d7de;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color .2s ease, background .2s ease;
+}
+.uploader.dragover {
+  border-color: #0a5;
+  background: #f2fff7;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #0a5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .06s ease, opacity .2s ease;
+}
+.upload-btn:hover { opacity: .92; }
+.upload-btn:active { transform: translateY(1px); }
+
+.upload-btn.secondary {
+  background: #334155;
+}
+
+.hint {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* 카드 폭에 맞춰 너무 커지지 않게 */
+.preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.preview img {
+  max-width: 360px;   /* 원하는 픽셀로 조정: 280~420px 등 */
+  width: 100%;        /* 컨테이너보다 커지지 않도록 */
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* 모바일에서 더 작게 하고 싶으면 */
+@media (max-width: 480px) {
+  .preview img {
+    max-width: 300px;
+  }
+}
