@@ -67,7 +67,7 @@ footer { text-align:center; color:#888; }
 }
 
 .preview img {
-  max-width: 360px;   /* 원하는 픽셀로 조정: 280~420px 등 */
+  max-width: 300px;   /* 원하는 픽셀로 조정: 280~420px 등 */
   width: 100%;        /* 컨테이너보다 커지지 않도록 */
   height: auto;
   border-radius: 12px;
